@@ -10,10 +10,14 @@
 		1D15B80F1EE796CB009E4847 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D15B80E1EE796CB009E4847 /* AppDelegate.swift */; };
 		1D15B8111EE796CB009E4847 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D15B8101EE796CB009E4847 /* ViewController.swift */; };
 		1D15B8141EE796CB009E4847 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D15B8121EE796CB009E4847 /* Main.storyboard */; };
-		1D15B8161EE796CB009E4847 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D15B8151EE796CB009E4847 /* Assets.xcassets */; };
 		1D15B8191EE796CB009E4847 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D15B8171EE796CB009E4847 /* LaunchScreen.storyboard */; };
 		1D15B8241EE796CB009E4847 /* Food_FormUlaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D15B8231EE796CB009E4847 /* Food_FormUlaTests.swift */; };
 		1D15B82F1EE796CB009E4847 /* Food_FormUlaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D15B82E1EE796CB009E4847 /* Food_FormUlaUITests.swift */; };
+		1D15B83D1EE79CFC009E4847 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D15B83C1EE79CFC009E4847 /* Assets.xcassets */; };
+		1D15B8411EE7A908009E4847 /* MeasurementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D15B8401EE7A908009E4847 /* MeasurementView.swift */; };
+		1D15B8431F0189E3009E4847 /* IngredientsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D15B8421F0189E3009E4847 /* IngredientsTableViewCell.swift */; };
+		1DEFAA6D1F019578003A5FB8 /* IngredientsTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEFAA6C1F019578003A5FB8 /* IngredientsTableHeaderView.swift */; };
+		1DEFAA6F1F0195B8003A5FB8 /* IngredientsTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DEFAA6E1F0195B8003A5FB8 /* IngredientsTableHeaderView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +42,6 @@
 		1D15B80E1EE796CB009E4847 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1D15B8101EE796CB009E4847 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1D15B8131EE796CB009E4847 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		1D15B8151EE796CB009E4847 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D15B8181EE796CB009E4847 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1D15B81A1EE796CB009E4847 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D15B81F1EE796CB009E4847 /* Food FormUlaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Food FormUlaTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +50,11 @@
 		1D15B82A1EE796CB009E4847 /* Food FormUlaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Food FormUlaUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D15B82E1EE796CB009E4847 /* Food_FormUlaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food_FormUlaUITests.swift; sourceTree = "<group>"; };
 		1D15B8301EE796CB009E4847 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D15B83C1EE79CFC009E4847 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1D15B8401EE7A908009E4847 /* MeasurementView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeasurementView.swift; sourceTree = "<group>"; };
+		1D15B8421F0189E3009E4847 /* IngredientsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientsTableViewCell.swift; sourceTree = "<group>"; };
+		1DEFAA6C1F019578003A5FB8 /* IngredientsTableHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = IngredientsTableHeaderView.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		1DEFAA6E1F0195B8003A5FB8 /* IngredientsTableHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IngredientsTableHeaderView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +107,14 @@
 			children = (
 				1D15B80E1EE796CB009E4847 /* AppDelegate.swift */,
 				1D15B8101EE796CB009E4847 /* ViewController.swift */,
+				1D15B8401EE7A908009E4847 /* MeasurementView.swift */,
+				1D15B8421F0189E3009E4847 /* IngredientsTableViewCell.swift */,
 				1D15B8121EE796CB009E4847 /* Main.storyboard */,
-				1D15B8151EE796CB009E4847 /* Assets.xcassets */,
+				1D15B83C1EE79CFC009E4847 /* Assets.xcassets */,
 				1D15B8171EE796CB009E4847 /* LaunchScreen.storyboard */,
 				1D15B81A1EE796CB009E4847 /* Info.plist */,
+				1DEFAA6C1F019578003A5FB8 /* IngredientsTableHeaderView.swift */,
+				1DEFAA6E1F0195B8003A5FB8 /* IngredientsTableHeaderView.xib */,
 			);
 			path = "Food FormUla";
 			sourceTree = "<group>";
@@ -233,8 +245,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D15B8191EE796CB009E4847 /* LaunchScreen.storyboard in Resources */,
-				1D15B8161EE796CB009E4847 /* Assets.xcassets in Resources */,
+				1D15B83D1EE79CFC009E4847 /* Assets.xcassets in Resources */,
 				1D15B8141EE796CB009E4847 /* Main.storyboard in Resources */,
+				1DEFAA6F1F0195B8003A5FB8 /* IngredientsTableHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,8 +272,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DEFAA6D1F019578003A5FB8 /* IngredientsTableHeaderView.swift in Sources */,
 				1D15B8111EE796CB009E4847 /* ViewController.swift in Sources */,
 				1D15B80F1EE796CB009E4847 /* AppDelegate.swift in Sources */,
+				1D15B8411EE7A908009E4847 /* MeasurementView.swift in Sources */,
+				1D15B8431F0189E3009E4847 /* IngredientsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,6 +523,7 @@
 				1D15B8351EE796CB009E4847 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1D15B8361EE796CB009E4847 /* Build configuration list for PBXNativeTarget "Food FormUlaTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +532,7 @@
 				1D15B8381EE796CB009E4847 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1D15B8391EE796CB009E4847 /* Build configuration list for PBXNativeTarget "Food FormUlaUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +541,7 @@
 				1D15B83B1EE796CB009E4847 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
