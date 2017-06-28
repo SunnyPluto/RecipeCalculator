@@ -33,7 +33,6 @@
                 <constraint firstAttribute="trailing" secondItem="orZ-qt-kVY" secondAttribute="trailing" constant="16" id="3RT-6u-fnj"/>
                 <constraint firstItem="f9P-c1-AWz" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="Ll6-Qj-g40"/>
                 <constraint firstItem="orZ-qt-kVY" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="Loy-7T-daJ"/>
-                <constraint firstAttribute="bottom" secondItem="f9P-c1-AWz" secondAttribute="bottom" constant="20" id="RWp-Es-oJt"/>
                 <constraint firstItem="f9P-c1-AWz" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="aC9-kF-bJr"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
