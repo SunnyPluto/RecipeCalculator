@@ -31,6 +31,7 @@ class MeasurementView: UIView {
         }
     }
     
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         configureFormType()
