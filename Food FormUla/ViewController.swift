@@ -8,8 +8,10 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource {
-
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    var ingridients: [Ingredient] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -19,13 +21,13 @@ class ViewController: UIViewController, UITableViewDataSource {
         ingredientsTableView.tableHeaderView = ingredientsTableHeader
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
         // Dispose of any resources that can be recreated.
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         fromMeasurementView.clearTextField()
@@ -42,19 +44,33 @@ class ViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return ingridients.count + 1
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        if indexPath.row == 0 {
+        if indexPath.row + 1 == tableView.numberOfRows(inSection: 0)  {
+            return tableView.dequeueReusableCell(withIdentifier: "AddIngredientsCell", for: indexPath)
+            
+        } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "IngredientsCell", for: indexPath) as! IngredientsTableViewCell
+            let ingredient = ingridients[indexPath.row]
+
+            cell.ingredientNameTextField.text = ingredient.name
+            cell.amountNameTextField.text = String(ingredient.amount)
             return cell
         }
-        else if indexPath.row + 1 == tableView.numberOfRows(inSection: 0)  {
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row + 1 == tableView.numberOfRows(inSection: indexPath.section) {
+            let ingredient = Ingredient()
+            ingredient.amount = Int(arc4random()) % 1000
+            ingridients.append(ingredient)
+            tableView.reloadData()
+            print("selected add row")
             
         }
-        return tableView.dequeueReusableCell(withIdentifier: "", for: indexPath)
+        print("row selected" + indexPath.description)
     }
 }
 
