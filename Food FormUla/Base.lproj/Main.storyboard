@@ -85,7 +85,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="dvl-KV-f37">
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="dvl-KV-f37" userLabel="From Type Segmented Control">
                                         <rect key="frame" x="0.0" y="29" width="115" height="29"/>
                                         <segments>
                                             <segment title="Square"/>
@@ -95,13 +95,13 @@
                                             <action selector="formTypePressed:" destination="gtS-gv-pwi" eventType="valueChanged" id="YDc-Kj-GM7"/>
                                         </connections>
                                     </segmentedControl>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Diameter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="55P-bv-1WH">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Diameter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="55P-bv-1WH" userLabel="From Measure Label">
                                         <rect key="frame" x="0.0" y="65" width="70" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4jK-if-Zap">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4jK-if-Zap" userLabel="From Measure Text Field">
                                         <rect key="frame" x="0.0" y="94" width="115" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="115" id="ahd-IL-lzk"/>
@@ -141,15 +141,58 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="40.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="56H-OT-WKj">
-                                                    <rect key="frame" x="27" y="5" width="97" height="30"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vZh-2X-24Z" userLabel="IngredientsNameLabel">
+                                                    <rect key="frame" x="16" y="8" width="42" height="24.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GGn-dt-oM4" userLabel="AmountName Label">
+                                                    <rect key="frame" x="317" y="8" width="42" height="24.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="GGn-dt-oM4" firstAttribute="top" secondItem="Imt-jT-XCg" secondAttribute="topMargin" id="EFx-7R-oIm"/>
+                                                <constraint firstItem="vZh-2X-24Z" firstAttribute="leading" secondItem="Imt-jT-XCg" secondAttribute="leadingMargin" constant="8" id="JFb-oV-S9O"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="vZh-2X-24Z" secondAttribute="bottom" id="JIG-gY-qP9"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="GGn-dt-oM4" secondAttribute="trailing" constant="8" id="WFb-AN-vx5"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="GGn-dt-oM4" secondAttribute="bottom" id="bXK-34-Iu7"/>
+                                                <constraint firstItem="vZh-2X-24Z" firstAttribute="top" secondItem="Imt-jT-XCg" secondAttribute="topMargin" id="rKL-Uy-tL9"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="amountNameLabel" destination="GGn-dt-oM4" id="F7T-Y8-B4L"/>
+                                            <outlet property="ingredientNameLabel" destination="vZh-2X-24Z" id="VAK-mw-ktw"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddIngredientsCell" id="BAf-Tj-xTn" userLabel="AddIngredientsCell" customClass="AddIngredientsTableViewCell" customModule="Food_FormUla" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="69" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BAf-Tj-xTn" id="l0i-BY-DxO">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MmL-Ge-ID0">
+                                                    <rect key="frame" x="8" y="7" width="46" height="32"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <state key="normal" title="Add"/>
+                                                    <connections>
+                                                        <action selector="addIngredientsTapped:" destination="BAf-Tj-xTn" eventType="touchUpInside" id="Edr-XK-f0d"/>
+                                                    </connections>
+                                                </button>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O6q-Zy-knX" userLabel="AddAmountTextField">
+                                                    <rect key="frame" x="258" y="7" width="97" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ixc-TW-hij">
-                                                    <rect key="frame" x="230" y="5" width="97" height="30"/>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4pb-cj-ds5" userLabel="AddingredientTextField">
+                                                    <rect key="frame" x="76" y="6" width="97" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -158,25 +201,10 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="amountNameTextField" destination="ixc-TW-hij" id="Y7a-pv-Ia8"/>
-                                            <outlet property="ingredientNameTextField" destination="56H-OT-WKj" id="kPK-mz-mcK"/>
+                                            <outlet property="addAmountTextField" destination="O6q-Zy-knX" id="WEY-LT-mJd"/>
+                                            <outlet property="addButton" destination="MmL-Ge-ID0" id="3lv-Ph-f7d"/>
+                                            <outlet property="addIngredientTextField" destination="4pb-cj-ds5" id="kFe-3q-WHR"/>
                                         </connections>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddIngredientsCell" id="BAf-Tj-xTn" userLabel="AddIngredientsCell">
-                                        <rect key="frame" x="0.0" y="69" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BAf-Tj-xTn" id="l0i-BY-DxO">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MmL-Ge-ID0">
-                                                    <rect key="frame" x="19" y="7" width="46" height="32"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <state key="normal" title="+"/>
-                                                </button>
-                                            </subviews>
-                                        </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

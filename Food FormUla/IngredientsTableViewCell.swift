@@ -11,7 +11,7 @@ import UIKit
 
 class IngredientsTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var amountNameTextField: UITextField!
-    @IBOutlet weak var ingredientNameTextField: UITextField!
-
-}
+    @IBOutlet weak var amountNameLabel: UILabel!
+    @IBOutlet weak var ingredientNameLabel: UILabel!
+    
+    }

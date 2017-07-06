@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, AddIngredientsTableViewCellDelegate {
     
     var ingridients: [Ingredient] = []
     
@@ -49,28 +49,35 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row + 1 == tableView.numberOfRows(inSection: 0)  {
-            return tableView.dequeueReusableCell(withIdentifier: "AddIngredientsCell", for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: "AddIngredientsCell", for: indexPath) as! AddIngredientsTableViewCell
+            cell.delegate = self
+            
+            return cell
             
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "IngredientsCell", for: indexPath) as! IngredientsTableViewCell
             let ingredient = ingridients[indexPath.row]
 
-            cell.ingredientNameTextField.text = ingredient.name
-            cell.amountNameTextField.text = String(ingredient.amount)
+            cell.ingredientNameLabel.text = ingredient.name
+            cell.amountNameLabel.text = String(ingredient.amount)
             return cell
         }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row + 1 == tableView.numberOfRows(inSection: indexPath.section) {
-            let ingredient = Ingredient()
-            ingredient.amount = Int(arc4random()) % 1000
-            ingridients.append(ingredient)
-            tableView.reloadData()
-            print("selected add row")
-            
         }
-        print("row selected" + indexPath.description)
+    }
+    
+    func addIngredientsTapped(cell: AddIngredientsTableViewCell) {
+        let ingredient = Ingredient()
+        ingredient.name = cell.addIngredientTextField.text ?? ""
+        ingredient.amount = Int(cell.addAmountTextField.text ?? "0") ?? 0
+        ingridients.append(ingredient)
+        ingredientsTableView.reloadData()
+        cell.addIngredientTextField.text = ""
+        cell.addAmountTextField.text = ""
+        
     }
 }
 

@@ -19,6 +19,7 @@
 		1DEFAA6D1F019578003A5FB8 /* IngredientsTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEFAA6C1F019578003A5FB8 /* IngredientsTableHeaderView.swift */; };
 		1DEFAA6F1F0195B8003A5FB8 /* IngredientsTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DEFAA6E1F0195B8003A5FB8 /* IngredientsTableHeaderView.xib */; };
 		8BEF12521F0B38AD00F8AF3E /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEF12511F0B38AD00F8AF3E /* Ingredient.swift */; };
+		8BEF12541F0DCA9000F8AF3E /* AddIngredientsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEF12531F0DCA9000F8AF3E /* AddIngredientsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		1DEFAA6C1F019578003A5FB8 /* IngredientsTableHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = IngredientsTableHeaderView.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		1DEFAA6E1F0195B8003A5FB8 /* IngredientsTableHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IngredientsTableHeaderView.xib; sourceTree = "<group>"; };
 		8BEF12511F0B38AD00F8AF3E /* Ingredient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
+		8BEF12531F0DCA9000F8AF3E /* AddIngredientsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddIngredientsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				1D15B8401EE7A908009E4847 /* MeasurementView.swift */,
 				1D15B8421F0189E3009E4847 /* IngredientsTableViewCell.swift */,
 				1D15B8121EE796CB009E4847 /* Main.storyboard */,
+				8BEF12531F0DCA9000F8AF3E /* AddIngredientsTableViewCell.swift */,
 				1D15B83C1EE79CFC009E4847 /* Assets.xcassets */,
 				1D15B8171EE796CB009E4847 /* LaunchScreen.storyboard */,
 				1D15B81A1EE796CB009E4847 /* Info.plist */,
@@ -281,6 +284,7 @@
 				1D15B80F1EE796CB009E4847 /* AppDelegate.swift in Sources */,
 				1D15B8411EE7A908009E4847 /* MeasurementView.swift in Sources */,
 				1D15B8431F0189E3009E4847 /* IngredientsTableViewCell.swift in Sources */,
+				8BEF12541F0DCA9000F8AF3E /* AddIngredientsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
